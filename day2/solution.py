@@ -1,24 +1,15 @@
-
+#!/usr/bin/python
 checksum = 0
 
 dataset = []
 
 with open('input.tsv') as file:
     for line in file:
-        smallest, largest = ( 0, 0 )
-        row = line.split('\t')
-        rowNumbers = [int(x) for x in row]
-        dataset += [rowNumbers]
-        for x in rowNumbers:
-            if x < smallest or smallest == 0:
-                smallest = x
-            if x > largest or largest == 0:
-                largest = x
-        checksum += (largest - smallest)
+        row = [int(x) for x in line.split('\t')]
+        checksum += ( max(row) -  min(row) )
+        dataset += [row]
 
 print checksum
-
-print dataset
 
 checksum2 = 0
 

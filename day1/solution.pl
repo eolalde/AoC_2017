@@ -10,7 +10,7 @@ sub solution {
     for my $i (0..scalar(@arrNum) - 1) {
         # print $arrNum[$i];
         if ($i == scalar(@arrNum) - 1) {
-            $sum += $arrNum[$0] if $arrNum[$i] == $arrNum[0];
+            $sum += $arrNum[0] if $arrNum[$i] == $arrNum[0];
         } else{
             $sum += $arrNum[$i] if $arrNum[$i] == $arrNum[$i + 1]
         }
