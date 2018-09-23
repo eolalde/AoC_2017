@@ -17,7 +17,6 @@ sub solution {
         $sum += $this if $this == $other;
     }
 
-
     for my $i ($offset..$listLen - 1) {
         my $this = $arrNum[$i];
         my $other = $arrNum[$i-$offset];
